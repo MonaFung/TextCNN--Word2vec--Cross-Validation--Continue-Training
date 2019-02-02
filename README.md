@@ -15,7 +15,7 @@ sentences = word2vec.LineSentence('your_train.txt')<br>
 model = word2vec.Word2Vec(sentences, hs=1,min_count=1,window=3,size=100)<br>
 model.wv.save_word2vec_format(' your_w2v_result.txt', binary=False)<br>
 ### Then, modify your train.py. 
-Add your word2vec file to the blank
+Add your word2vec file to the blank<br>
 tf.flags.DEFINE_string("word2vec", `""`, "Word2vec file with pre-trained embeddings (default: None)")<br>
 ### Please refer to train.py.
 
@@ -24,7 +24,7 @@ tf.flags.DEFINE_string("word2vec", `""`, "Word2vec file with pre-trained embeddi
 
 ## 3.How to continue training from a certain checkpoint ?
 Sometimes we want to train new samples on previous trained model instead of train from scratch. You can simply use save and restore feature of tensorflow.
-Add your checkpoint directory to the blank
+Add your checkpoint directory to the blank<br>
 tf.flags.DEFINE_string("checkpoint_dir", `""`, "Checkpoint directory from training run")<br>
 ### Please refer to continue_train.py.
 

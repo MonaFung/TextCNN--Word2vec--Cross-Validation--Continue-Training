@@ -23,7 +23,7 @@ tf.flags.DEFINE_string("word2vec", `""`, "Word2vec file with pre-trained embeddi
 ### Please refer to train_cross_validation.py.
 
 ## 3.How to continue training from a certain checkpoint ?
-Sometimes we want to train new samples on previous trained model instead of train from scratch. You can simply use save and restore feature of tensorflow.
+Sometimes we want to train new samples on previous trained model instead of train from scratch. You can simply use save and restore feature of tensorflow.<br>
 Add your checkpoint directory to the blank<br>
 tf.flags.DEFINE_string("checkpoint_dir", `""`, "Checkpoint directory from training run")<br>
 ### Please refer to continue_train.py.

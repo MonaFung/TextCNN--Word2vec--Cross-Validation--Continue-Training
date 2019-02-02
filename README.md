@@ -5,8 +5,9 @@ https://github.com/dennybritz/cnn-text-classification-tf
 
 While using TextCNN model in practice, I made several improvements to make this model more flexible and practical.
 
-1.	How to implement word2vec in Embedding layer ?
-1)	First, produce word2vec file using genism. You can run like this:
+##1.How to implement word2vec in Embedding layer ?
+###First, produce word2vec file using genism. 
+You can run like this:
 import logging
 import os
 from gensim.models import word2vec
@@ -15,7 +16,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 sentences = word2vec.LineSentence('your_train.txt')
 model = word2vec.Word2Vec(sentences, hs=1,min_count=1,window=3,size=100)
 model.wv.save_word2vec_format(' your_w2v_result.txt', binary=False)
-2)	Then add this to your train.py:
+###Then add this to your train.py:
 tf.flags.DEFINE_string("word2vec", "your_w2v_result.txt", "Word2vec file with pre-trained embeddings (default: None)")
 
 if FLAGS.word2vec:
